@@ -27,6 +27,13 @@ def ImportSentenceData() -> List[str]:
             resultList.extend(ProcessTXT2Lines(content))
     return resultList
 
+def ImportSentenceData2() -> List[str]:
+    resultList = []
+    path = os.path.join(config.PROCESSED_DATA_PATH, config.SENTENCE_FILENAME)
+    content = ReadTXT(path)
+    resultList.extend(ProcessTXT2Lines(content))
+    return resultList
+
 def WriteSentenceData() -> None:
     resultList = ImportSentenceData()
     path = os.path.join(config.PROCESSED_DATA_PATH, config.SENTENCE_FILENAME)
