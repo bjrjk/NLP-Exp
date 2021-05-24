@@ -1,4 +1,4 @@
-import IO, tokenizer, entropy, HMM
+import IO, tokenizer, entropy, HMM, WSD
 
 def Prepare():
     IO.WriteSentenceData()
@@ -17,8 +17,11 @@ def predict():
         print(f"Model Result: {mdlTXT}")
         print(f"Sentence Result: {resultTXT}")
 
+def func_WSD():
+    WSD.WSD_Main()
+
 def Main():
-    predict()
+    func_WSD()
 
 if __name__ == '__main__':
     Main()
