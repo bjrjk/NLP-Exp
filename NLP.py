@@ -18,9 +18,11 @@ def predict():
         print(f"Sentence Result: {resultTXT}")
 
 def func_WSD():
-    WSD.WSD_Main()
+    while True:
+        WSD.WSD_Main()
 
 def Main():
+    # predict()
     func_WSD()
 
 if __name__ == '__main__':

@@ -18,7 +18,7 @@ initStatus = [0.0, 0.0, 0.0, 0.0]  # Pi
 statusTransMat = None  # A
 observeMat = None  # B
 
-def saveModel() -> None:
+def saveModel() -> None:  # 保存模型
     global observeCounter, observeRelation
     global initStatus, statusTransMat, observeMat
     path = os.path.join(config.PROCESSED_DATA_PATH, config.SEGMODEL_FILENAME)
@@ -28,7 +28,7 @@ def saveModel() -> None:
     print("Model Saved!")
 
 
-def loadModel() -> None:
+def loadModel() -> None:  # 加载模型
     global observeCounter, observeRelation
     global initStatus, statusTransMat, observeMat
     path = os.path.join(config.PROCESSED_DATA_PATH, config.SEGMODEL_FILENAME)
@@ -59,7 +59,7 @@ def getSentenceSOSeq(sentence: List[str]) -> Tuple[List[str], List[str]]:
     return charList, statusList
 
 
-def train() -> None:
+def train() -> None:  # 训练模型
     global relation, observeCounter, observeRelation
     global initStatus, statusTransMat, observeMat
     print("Start to train...")
@@ -151,7 +151,7 @@ def getStatusTransMatWithDefault(i: int, j: int) -> float:
         return DEFAULT_RATE
     return statusTransMat[i][j]
 
-def predict(sentence: str) -> str:  # Viterbi Algorithm
+def predict(sentence: str) -> str:  # Viterbi算法
     global observeCounter, observeRelation
     global initStatus, statusTransMat, observeMat
     global revRelation

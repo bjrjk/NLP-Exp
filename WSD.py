@@ -33,9 +33,9 @@ def WSD_Predict(inputStr):
     stat2 = stat(wordList, FuShe2)
     print(f"Freq: {stat1}, {stat2}")
     if stat1 > stat2:
-        print("辐射：影响范围")
+        print("动词：对周边事物产生的一定影响")
     else:
-        print("辐射：核、电磁")
+        print("物理名词：指的是由场源发出的电磁能量中一部分脱离场源向远处传播，而后不再返回场源的现象")
 
 def WSD_Main():
     WSD_Predict(input("Input WSD 辐射 Sentence:"))
